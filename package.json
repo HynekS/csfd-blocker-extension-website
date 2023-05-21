@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "cross-env NODE_ENV=development concurrently \"npx tailwindcss -i ./public/css/input.css -o ./public/dist/output.css --watch\"  \"live-server ./public\""
+    "dev": "cross-env NODE_ENV=development concurrently \"npx tailwindcss -i ./docs/css/input.css -o ./docs/dist/output.css --watch\"  \"live-server ./docs\""
   },
   "devDependencies": {
     "concurrently": "^4.1.0",
