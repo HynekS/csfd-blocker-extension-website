@@ -7,7 +7,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
 
-    <link rel="stylesheet" href="/build/tailwind.css" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -36,29 +36,31 @@
     <title>CSFD.cz Blocker Chrome Extension</title>
   </head>
   <body class="antialiased">
-    <div class="relative bg-silver-md">
+    <div class="relative bg-slate-50">
       <!-- container -->
       <main class="relative max-w-5xl mx-auto">
         <div
           class="flex flex-col min-h-screen lg:flex-row lg:items-center lg:p-8"
         >
           <div
-            class="flex flex-col flex-grow bg-white lg:shadow-2xl lg:rounded-lg lg:overflow-hidden pb-20"
+            class="flex flex-col flex-grow bg-white lg:shadow-xl lg:rounded-lg lg:overflow-hidden pb-20"
           >
             <!-- header -->
             <header
               class="flex-grow flex flex-col justify-center p-12 pt-5 md:pt-8"
             >
               <div class="md:pl-16 pl-0">
-                <div class="text-slate-md mb-16 flex justify-between">
+                <div class="text-gray-500 mb-16 flex justify-between">
                   <a href="#">
-                    <div class="flex items-center gap-1">
+                    <div class="flex items-center gap-1 -ml-px">
+                      <!--"style" is used to prevent FOUC-->
                       <svg
                         version="1.0"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 700 700"
                         fill="#ba0305"
                         class="w-5 h-5"
+                        style="width: 1.25rem; height: 1.25rem"
                       >
                         <path
                           d="M333 52c-35.3 4.9-65.1 20.8-88.5 47-16.8 18.9-28.8 44.6-33 70.5-1.2 7.1-1.5 20.2-1.5 61.2V283l-26.7.2-26.8.3v126c0 118.6.1 126.5 1.8 133.8 7.8 33.1 32.4 57.7 65.2 65.3 7.6 1.8 14.7 1.9 127 1.9 96.5 0 120.1-.3 125-1.4 36.2-8.1 63.4-38.1 67.5-74.4.7-6.1 1-50.4.8-130.2l-.3-121-26.7-.3-26.8-.2v-52.3c0-56.3-.4-61.3-5.5-79.2-3.2-11-11.5-28.7-18.3-38.6-20.6-30.4-51.8-51.3-88-58.9-11.1-2.4-35-3.4-45.2-2zm35.5 59.7c26.8 5.9 50.5 27.3 58.9 53.3 4.3 13.1 4.6 17.1 4.6 68.7V283H267.9l.3-52.8c.4-57 .3-55.7 6.2-70.4 8.9-22.1 29.6-40.4 53.2-47.3 12.7-3.7 26.6-4 40.9-.8zM365.2 361c20.9 6.4 35.7 26.8 35.8 49 0 15.3-9 32.4-21.6 41.1l-4.4 3-.2 41.7-.3 41.7h-49l-.3-41.7-.2-41.7-4.4-3c-6.1-4.2-12.6-11.8-15.9-18.4-7.4-15.2-7.6-30.1-.3-45.2 5.9-12.4 16.4-21.7 29.4-26.2 8.9-3 22.2-3.2 31.4-.3z"
@@ -74,12 +76,13 @@
                     href="https://github.com/HynekS/csfd-blocker"
                     aria-label="Link to extension's github repository"
                     target="_blank"
-                    class="cursor-pointer hover:text-slate-dk"
+                    class="cursor-pointer hover:text-gray-600"
                   >
                     <svg
-                      class="h-6 w-6 fill-current"
+                      class="h-6 w-6"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
                     >
                       <path
                         d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"
@@ -165,12 +168,12 @@
 
             <!-- page section -->
             <section
-              class="border-t-2 border-silver-md flex-grow flex flex-col justify-center py-10 pt-6 px-12"
+              class="border-t-2 border-gray-200 flex-grow flex flex-col justify-center py-10 pt-6 px-12"
             >
               <div class="md:pl-16 pl-0 lg:pr-16">
                 <section class="mb-8">
                   <h2 class="text-xl font-bold">Why?</h2>
-                  <p class="text-slate-dk mt-1 text-sm md:text-base">
+                  <p class="text-gray-600 mt-1 text-sm md:text-base">
                     Let's be honest: a lot of those who post reviews or comment
                     on this website are one of these kinds of people:
                   </p>
@@ -179,7 +182,7 @@
                     alt=""
                     class="my-4"
                   />
-                  <p class="text-slate-dk mt-1 text-sm md:text-base">
+                  <p class="text-gray-600 mt-1 text-sm md:text-base">
                     They might be offensive, boring, or just plain annoying.
                     This extension gives you an opportunity to avoid them
                     completely.
@@ -191,11 +194,11 @@
                 </section>
                 <section class="mb-8">
                   <h2 class="text-xl font-bold">How?</h2>
-                  <p class="text-slate-dk mt-1 text-sm md:text-base"></p>
-                  <ul class="mb-8 space-y-1 text-left text-slate-dk">
+                  <p class="text-gray-600 mt-1 text-sm md:text-base"></p>
+                  <ul class="mb-8 space-y-1 text-left text-gray-600">
                     <li class="flex items-center space-x-1">
                       <svg
-                        class="flex-shrink-0 w-5 h-5 fill-current"
+                        class="flex-shrink-0 w-5 h-5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -210,7 +213,7 @@
                     </li>
                     <li class="flex items-center space-x-1">
                       <svg
-                        class="flex-shrink-0 w-5 h-5 fill-current"
+                        class="flex-shrink-0 w-5 h-5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -224,7 +227,7 @@
                     </li>
                     <li class="flex items-center space-x-1">
                       <svg
-                        class="flex-shrink-0 w-5 h-5 fill-current"
+                        class="flex-shrink-0 w-5 h-5"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -240,11 +243,14 @@
                 </section>
                 <section class="mb-8">
                   <h2 class="text-xl font-bold">But seriously, How?!</h2>
-                  <p class="text-slate-dk mt-1 text-sm md:text-base">
-                    Don't worry. It's really simple. First, install the
-                    extension from the Chrome Web Store.
+                  <p class="text-gray-600 mt-1 text-sm md:text-base">
+                    Don't worry. It's really simple.
                   </p>
-                  <li class="flex gap-6 md:gap-8 relative">
+                  <p class="text-gray-600 mt-4 text-sm md:text-base">
+                    <span class="text-gray-700 font-bold">1. </span>First,
+                    install the extension from the Chrome Web Store.
+                  </p>
+                  <li class="flex gap-1 flex-col md:flex-row md:gap-8 relative">
                     <div class="relative w-80">
                       <img
                         src="images/01_csfd-blocker-added-button.png"
@@ -252,7 +258,7 @@
                         class="rounded shadow my-4"
                       />
                       <svg
-                        class="fill-current w-5 h-5 absolute top-0 right-0 mt-6 mr-8 transform rotate-45"
+                        class="w-5 h-5 absolute top-0 left-[75%] top-[15%] transform rotate-45"
                         viewBox="0 0 18 12"
                         xmlns="http://www.w3.org/2000/svg"
                       >
@@ -263,45 +269,77 @@
                         ></path>
                       </svg>
                     </div>
-                    <p class="text-slate-dk mt-8 w-1/2">
-                      <span class="text-charcoal-lt font-bold">1.</span> After
-                      the installation, you'll find three tiny dots in the top
-                      right corner of the "review" or "comment" box
+                    <p
+                      class="text-gray-600 mt-8 w-full md:w-1/2 text-sm md:text-base"
+                    >
+                      <span class="text-gray-700 font-bold">2.</span> After the
+                      installation, you'll find three tiny dots in the top right
+                      corner of the "review" or "comment" box
                     </p>
                   </li>
 
-                  <li class="flex gap-6 md:gap-8 relative">
+                  <li class="flex gap-1 flex-col md:flex-row md:gap-8 relative">
                     <div class="relative w-80">
                       <img
                         src="images/02_csfd-blocker-open-popup.png"
                         alt=""
                         class="rounded shadow my-4"
                       />
+                      <svg
+                        class="w-5 h-5 absolute top-0 left-[50%] top-[70%] transform -rotate-45"
+                        viewBox="0 0 18 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M14.5858 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H14.5858L11.2929 1.70711C10.9024 1.31658 10.9024 0.683418 11.2929 0.292893C11.6834 -0.0976311 12.3166 -0.0976311 12.7071 0.292893L17.7071 5.29289C18.0976 5.68342 18.0976 6.31658 17.7071 6.70711L12.7071 11.7071C12.3166 12.0976 11.6834 12.0976 11.2929 11.7071C10.9024 11.3166 10.9024 10.6834 11.2929 10.2929L14.5858 7Z"
+                        ></path>
+                      </svg>
                     </div>
-                    <p class="text-slate-dk mt-8 w-1/2">
-                      <span class="text-charcoal-lt font-bold">2.</span>
+                    <p
+                      class="text-gray-600 mt-8 w-full md:w-1/2 text-sm md:text-base"
+                    >
+                      <span class="text-gray-700 font-bold">3.</span>
                       Clicking those dots will expand a menu with a single
                       option:
                       <span
-                        class="inline-block bg-silver-lt rounded border border-slate-lt px-1 py-0.5"
+                        class="inline-block bg-gray-50 rounded border border-gray-200 px-1 py-0.5"
                         >"Block user <span class="font-medium">XY."</span></span
                       >
                       Click on it.
                     </p>
                   </li>
 
-                  <li class="flex gap-6 md:gap-8 relative">
+                  <li class="flex gap-1 flex-col md:flex-row md:gap-8 relative">
                     <div class="relative w-80">
                       <img
                         src="images/03_csfd-blocker-after-blocking-state.png"
                         alt=""
                         class="rounded shadow my-4"
                       />
+                      <svg
+                        class="w-5 h-5 absolute top-0 left-[70%] top-[12%] transform rotate-90"
+                        viewBox="0 0 18 12"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M14.5858 7H1C0.447715 7 0 6.55228 0 6C0 5.44772 0.447715 5 1 5H14.5858L11.2929 1.70711C10.9024 1.31658 10.9024 0.683418 11.2929 0.292893C11.6834 -0.0976311 12.3166 -0.0976311 12.7071 0.292893L17.7071 5.29289C18.0976 5.68342 18.0976 6.31658 17.7071 6.70711L12.7071 11.7071C12.3166 12.0976 11.6834 12.0976 11.2929 11.7071C10.9024 11.3166 10.9024 10.6834 11.2929 10.2929L14.5858 7Z"
+                        ></path>
+                      </svg>
                     </div>
-                    <p class="text-slate-dk mt-8 w-1/2">
-                      <span class="text-charcoal-lt font-bold">3.</span> The
-                      user is now blocked. You can unblock him using the same
-                      menu that will appear if you click on the "show post"
+                    <p
+                      class="text-gray-600 mt-8 w-full md:w-1/2 text-sm md:text-base"
+                    >
+                      <span class="text-gray-700 font-bold">4.</span> The user
+                      is now blocked. You can unblock him using the same menu
+                      that will appear if you click on the
+                      <span
+                        class="inline-block bg-gray-50 rounded-full border border-gray-200 uppercase text-xs text-gray-500 px-2"
+                        >show post</span
+                      >
                       button.
                     </p>
                   </li>
@@ -311,10 +349,10 @@
                   <h2 class="text-xl font-bold">
                     Looks cool! What else can it do?
                   </h2>
-                  <p class="text-slate-dk mt-1 text-sm md:text-base">
+                  <p class="text-gray-600 mt-1 text-sm md:text-base">
                     To easily manage the list of blocked users, or to add users
                     without searching for their posts, you can use the
-                    <em>popup</em>. The Popup can be activated by clicking the
+                    <em>Popup</em>. It can be activated by clicking the
                     extension icon right next to the address bar.
                   </p>
 
@@ -325,28 +363,27 @@
                   />
                 </section>
                 <section class="mb-8">
-                  <h2 class="text-xl font-bold">
-                    But… what about the freedom of speech?
-                  </h2>
-                  <p class="text-slate-dk mt-1 text-sm md:text-base">
-                    I'm a big fan of free speech! I just think that freedom of
-                    speech is complemented by the freedom not to listen.
+                  <h2 class="text-xl font-bold">But… freedom of speech?</h2>
+                  <p class="text-gray-600 mt-1 text-sm md:text-base">
+                    I'm a big fan of free speech. This extension doesn't
+                    restrict it in any way. It just emphasizes the freedom
+                    <em>not to listen</em>.
                   </p>
                 </section>
               </div>
             </section>
 
             <!-- page section -->
-            <section class="border-t-2 border-silver-md">
+            <section class="border-t-2 border-gray-200">
               <!-- items -->
               <div class="flex flex-wrap">
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-silver-md"
+                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
                       <svg
-                        class="flex-shrink-0 w-6 h-6 fill-current"
+                        class="flex-shrink-0 w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -359,22 +396,22 @@
                       </svg>
                     </div>
                     <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-charcoal-md text-lg">
+                      <h2 class="font-medium text-gray-800 text-lg">
                         Easy to use
                       </h2>
-                      <p class="text-slate-dk mt-1 text-sm md:text-base">
+                      <p class="text-gray-600 mt-1 text-sm md:text-base">
                         This extension is very simple and easy to use.
                       </p>
                     </section>
                   </div>
                 </div>
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-silver-md"
+                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
                       <svg
-                        class="flex-shrink-0 w-6 h-6 fill-current"
+                        class="flex-shrink-0 w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -387,10 +424,10 @@
                       </svg>
                     </div>
                     <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-charcoal-md text-lg">
+                      <h2 class="font-medium text-gray-800 text-lg">
                         Completely free
                       </h2>
-                      <p class="text-slate-dk mt-1 text-sm md:text-base">
+                      <p class="text-gray-600 mt-1 text-sm md:text-base">
                         This extension is completely free. It doesn't require
                         any registration whatsoever.
                       </p>
@@ -401,12 +438,12 @@
 
               <div class="flex flex-wrap">
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-silver-md"
+                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
                       <svg
-                        class="flex-shrink-0 w-6 h-6 fill-current"
+                        class="flex-shrink-0 w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -419,10 +456,10 @@
                       </svg>
                     </div>
                     <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-charcoal-md text-lg">
+                      <h2 class="font-medium text-gray-800 text-lg">
                         Open source
                       </h2>
-                      <p class="text-slate-dk mt-1 text-sm md:text-base">
+                      <p class="text-gray-600 mt-1 text-sm md:text-base">
                         This extension is entirely open source. Found anything
                         missing?
                         <a
@@ -437,12 +474,12 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-silver-md"
+                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
                       <svg
-                        class="flex-shrink-0 w-6 h-6 fill-current"
+                        class="flex-shrink-0 w-6 h-6"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -455,10 +492,10 @@
                       </svg>
                     </div>
                     <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-charcoal-md text-lg">
+                      <h2 class="font-medium text-gray-800 text-lg">
                         Uses cool stuff
                       </h2>
-                      <p class="text-slate-dk mt-1 text-sm md:text-base">
+                      <p class="text-gray-600 mt-1 text-sm md:text-base">
                         Built with
                         <a
                           href="https://preactjs.com/"
