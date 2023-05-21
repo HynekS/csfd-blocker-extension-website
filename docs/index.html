@@ -43,14 +43,14 @@
           class="flex flex-col min-h-screen lg:flex-row lg:items-center lg:p-8"
         >
           <div
-            class="flex flex-col flex-grow bg-white lg:shadow-xl lg:rounded-lg lg:overflow-hidden pb-20"
+            class="flex flex-col flex-grow pb-20 bg-white lg:shadow-xl lg:rounded-lg lg:overflow-hidden"
           >
             <!-- header -->
             <header
-              class="flex-grow flex flex-col justify-center p-12 pt-5 md:pt-8"
+              class="flex flex-col justify-center flex-grow p-12 pt-5 md:pt-8"
             >
-              <div class="md:pl-16 pl-0">
-                <div class="text-gray-500 mb-16 flex justify-between">
+              <div class="pl-0 md:pl-16">
+                <div class="flex justify-between mb-16 text-gray-500">
                   <a href="#">
                     <div class="flex items-center gap-1 -ml-px">
                       <!--"style" is used to prevent FOUC-->
@@ -79,7 +79,7 @@
                     class="cursor-pointer hover:text-gray-600"
                   >
                     <svg
-                      class="h-6 w-6"
+                      class="w-6 h-6"
                       viewBox="0 0 24 24"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
@@ -90,19 +90,19 @@
                     </svg>
                   </a>
                 </div>
-                <div class="flex gap-6 items-center justify-between">
+                <div class="flex items-center justify-between gap-6">
                   <div>
                     <h1
-                      class="sm:font-bold text-2xl sm:text-3xl md:text-4xl mt-6 leading-snug"
+                      class="mt-6 text-2xl leading-snug sm:font-bold sm:text-3xl md:text-4xl"
                     >
                       Avoid annoying users with <br />a click of a button
                     </h1>
-                    <p class="sm:text-xl text-beta-md mt-3 leading-snug">
+                    <p class="mt-3 leading-snug sm:text-xl text-beta-md">
                       Make
                       <a
                         href="https://csfd.cz"
                         target="_blank"
-                        class="text-primary-dk border-b border-primary-dk hover:bg-primary-lt"
+                        class="border-b text-primary-dk border-primary-dk hover:bg-primary-lt"
                         >csfd.cz</a
                       >
                       a better place for yourself
@@ -168,12 +168,12 @@
 
             <!-- page section -->
             <section
-              class="border-t-2 border-gray-200 flex-grow flex flex-col justify-center py-10 pt-6 px-12"
+              class="flex flex-col justify-center flex-grow px-12 py-10 pt-6 border-t-2 border-gray-200"
             >
-              <div class="md:pl-16 pl-0 lg:pr-16">
+              <div class="pl-0 md:pl-16 lg:pr-16">
                 <section class="mb-8">
                   <h2 class="text-xl font-bold">Why?</h2>
-                  <p class="text-gray-600 mt-1 text-sm md:text-base">
+                  <p class="mt-1 text-sm text-gray-600 md:text-base">
                     Let's be honest: a lot of those who post reviews or comment
                     on this website are one of these kinds of people:
                   </p>
@@ -182,7 +182,7 @@
                     alt=""
                     class="my-4"
                   />
-                  <p class="text-gray-600 mt-1 text-sm md:text-base">
+                  <p class="mt-1 text-sm text-gray-600 md:text-base">
                     They might be offensive, boring, or just plain annoying.
                     This extension gives you an opportunity to avoid them
                     completely.
@@ -194,7 +194,7 @@
                 </section>
                 <section class="mb-8">
                   <h2 class="text-xl font-bold">How?</h2>
-                  <p class="text-gray-600 mt-1 text-sm md:text-base"></p>
+                  <p class="mt-1 text-sm text-gray-600 md:text-base"></p>
                   <ul class="mb-8 space-y-1 text-left text-gray-600">
                     <li class="flex items-center space-x-1">
                       <svg
@@ -243,19 +243,19 @@
                 </section>
                 <section class="mb-8">
                   <h2 class="text-xl font-bold">But seriously, How?!</h2>
-                  <p class="text-gray-600 mt-1 text-sm md:text-base">
+                  <p class="mt-1 text-sm text-gray-600 md:text-base">
                     Don't worry. It's really simple.
                   </p>
-                  <p class="text-gray-600 mt-4 text-sm md:text-base">
-                    <span class="text-gray-700 font-bold">1. </span>First,
+                  <p class="mt-4 text-sm text-gray-600 md:text-base">
+                    <span class="font-bold text-gray-700">1. </span>First,
                     install the extension from the Chrome Web Store.
                   </p>
-                  <li class="flex gap-1 flex-col md:flex-row md:gap-8 relative">
+                  <li class="relative flex flex-col gap-1 md:flex-row md:gap-8">
                     <div class="relative w-80">
                       <img
                         src="images/01_csfd-blocker-added-button.png"
                         alt=""
-                        class="rounded shadow my-4"
+                        class="my-4 rounded shadow"
                       />
                       <svg
                         class="w-5 h-5 absolute top-0 left-[75%] top-[15%] transform rotate-45"
@@ -270,20 +270,20 @@
                       </svg>
                     </div>
                     <p
-                      class="text-gray-600 mt-8 w-full md:w-1/2 text-sm md:text-base"
+                      class="w-full mt-8 text-sm text-gray-600 md:w-1/2 md:text-base"
                     >
-                      <span class="text-gray-700 font-bold">2.</span> After the
+                      <span class="font-bold text-gray-700">2.</span> After the
                       installation, you'll find three tiny dots in the top right
                       corner of the "review" or "comment" box
                     </p>
                   </li>
 
-                  <li class="flex gap-1 flex-col md:flex-row md:gap-8 relative">
+                  <li class="relative flex flex-col gap-1 md:flex-row md:gap-8">
                     <div class="relative w-80">
                       <img
                         src="images/02_csfd-blocker-open-popup.png"
                         alt=""
-                        class="rounded shadow my-4"
+                        class="my-4 rounded shadow"
                       />
                       <svg
                         class="w-5 h-5 absolute top-0 left-[50%] top-[70%] transform -rotate-45"
@@ -298,9 +298,9 @@
                       </svg>
                     </div>
                     <p
-                      class="text-gray-600 mt-8 w-full md:w-1/2 text-sm md:text-base"
+                      class="w-full mt-8 text-sm text-gray-600 md:w-1/2 md:text-base"
                     >
-                      <span class="text-gray-700 font-bold">3.</span>
+                      <span class="font-bold text-gray-700">3.</span>
                       Clicking those dots will expand a menu with a single
                       option:
                       <span
@@ -311,12 +311,12 @@
                     </p>
                   </li>
 
-                  <li class="flex gap-1 flex-col md:flex-row md:gap-8 relative">
+                  <li class="relative flex flex-col gap-1 md:flex-row md:gap-8">
                     <div class="relative w-80">
                       <img
                         src="images/03_csfd-blocker-after-blocking-state.png"
                         alt=""
-                        class="rounded shadow my-4"
+                        class="my-4 rounded shadow"
                       />
                       <svg
                         class="w-5 h-5 absolute top-0 left-[70%] top-[12%] transform rotate-90"
@@ -331,13 +331,13 @@
                       </svg>
                     </div>
                     <p
-                      class="text-gray-600 mt-8 w-full md:w-1/2 text-sm md:text-base"
+                      class="w-full mt-8 text-sm text-gray-600 md:w-1/2 md:text-base"
                     >
-                      <span class="text-gray-700 font-bold">4.</span> The user
+                      <span class="font-bold text-gray-700">4.</span> The user
                       is now blocked. You can unblock him using the same menu
                       that will appear if you click on the
                       <span
-                        class="inline-block bg-gray-50 rounded-full border border-gray-200 uppercase text-xs text-gray-500 px-2"
+                        class="inline-block px-2 text-xs text-gray-500 uppercase border border-gray-200 rounded-full bg-gray-50"
                         >show post</span
                       >
                       button.
@@ -349,7 +349,7 @@
                   <h2 class="text-xl font-bold">
                     Looks cool! What else can it do?
                   </h2>
-                  <p class="text-gray-600 mt-1 text-sm md:text-base">
+                  <p class="mt-1 text-sm text-gray-600 md:text-base">
                     To easily manage the list of blocked users, or to add users
                     without searching for their posts, you can use the
                     <em>Popup</em>. It can be activated by clicking the
@@ -358,13 +358,13 @@
 
                   <img
                     src="images/04_csfd-blocker_popup.png"
-                    class="rounded shadow my-4"
+                    class="my-4 rounded shadow"
                     alt=""
                   />
                 </section>
                 <section class="mb-8">
                   <h2 class="text-xl font-bold">But… freedom of speech?</h2>
-                  <p class="text-gray-600 mt-1 text-sm md:text-base">
+                  <p class="mt-1 text-sm text-gray-600 md:text-base">
                     I'm a big fan of free speech. This extension doesn't
                     restrict it in any way. It just emphasizes the freedom
                     <em>not to listen</em>.
@@ -378,7 +378,7 @@
               <!-- items -->
               <div class="flex flex-wrap">
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
+                  class="flex flex-col w-full px-12 py-10 border-gray-200 sm:w-1/2 sm:border-r sm:border-b"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
@@ -395,18 +395,18 @@
                         ></path>
                       </svg>
                     </div>
-                    <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-gray-800 text-lg">
+                    <section class="flex flex-col ml-4 leading-relaxed md:ml-6">
+                      <h2 class="text-lg font-medium text-gray-800">
                         Easy to use
                       </h2>
-                      <p class="text-gray-600 mt-1 text-sm md:text-base">
+                      <p class="mt-1 text-sm text-gray-600 md:text-base">
                         This extension is very simple and easy to use.
                       </p>
                     </section>
                   </div>
                 </div>
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
+                  class="flex flex-col w-full px-12 py-10 border-gray-200 sm:w-1/2 sm:border-r sm:border-b"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
@@ -423,11 +423,11 @@
                         ></path>
                       </svg>
                     </div>
-                    <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-gray-800 text-lg">
+                    <section class="flex flex-col ml-4 leading-relaxed md:ml-6">
+                      <h2 class="text-lg font-medium text-gray-800">
                         Completely free
                       </h2>
-                      <p class="text-gray-600 mt-1 text-sm md:text-base">
+                      <p class="mt-1 text-sm text-gray-600 md:text-base">
                         This extension is completely free. It doesn't require
                         any registration whatsoever.
                       </p>
@@ -438,7 +438,7 @@
 
               <div class="flex flex-wrap">
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
+                  class="flex flex-col w-full px-12 py-10 border-gray-200 sm:w-1/2 sm:border-r sm:border-b"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
@@ -455,17 +455,17 @@
                         ></path>
                       </svg>
                     </div>
-                    <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-gray-800 text-lg">
+                    <section class="flex flex-col ml-4 leading-relaxed md:ml-6">
+                      <h2 class="text-lg font-medium text-gray-800">
                         Open source
                       </h2>
-                      <p class="text-gray-600 mt-1 text-sm md:text-base">
+                      <p class="mt-1 text-sm text-gray-600 md:text-base">
                         This extension is entirely open source. Found anything
                         missing?
                         <a
                           href="https://github.com/HynekS/csfd-blocker/issues"
                           target="_blank"
-                          class="text-primary-dk border-b border-primary-dk hover:bg-primary-lt"
+                          class="border-b text-primary-dk border-primary-dk hover:bg-primary-lt"
                           >Open an issue</a
                         >
                         on Github!
@@ -474,7 +474,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col px-12 py-10 w-full sm:w-1/2 sm:border-r sm:border-b border-gray-200"
+                  class="flex flex-col w-full px-12 py-10 border-gray-200 sm:w-1/2 sm:border-r sm:border-b"
                 >
                   <div class="flex flex-grow">
                     <div class="text-primary-dk">
@@ -491,22 +491,22 @@
                         ></path>
                       </svg>
                     </div>
-                    <section class="leading-relaxed flex flex-col ml-4 md:ml-6">
-                      <h2 class="font-medium text-gray-800 text-lg">
+                    <section class="flex flex-col ml-4 leading-relaxed md:ml-6">
+                      <h2 class="text-lg font-medium text-gray-800">
                         Uses cool stuff
                       </h2>
-                      <p class="text-gray-600 mt-1 text-sm md:text-base">
+                      <p class="mt-1 text-sm text-gray-600 md:text-base">
                         Built with
                         <a
                           href="https://preactjs.com/"
                           target="_blank"
-                          class="text-primary-dk border-b border-primary-dk hover:bg-primary-lt"
+                          class="border-b text-primary-dk border-primary-dk hover:bg-primary-lt"
                           >Preact</a
                         >,
                         <a
                           href="https://tailwindcss.com/"
                           target="_blank"
-                          class="text-primary-dk border-b border-primary-dk hover:bg-primary-lt"
+                          class="border-b text-primary-dk border-primary-dk hover:bg-primary-lt"
                           >Tailwindcss</a
                         >
                         and other cool stuff.
